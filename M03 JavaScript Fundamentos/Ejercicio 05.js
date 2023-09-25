@@ -30,6 +30,11 @@ function combinarNombres(nombre, apellido) {
    // Retorna "nombre" y "apellido" combinados en un mismo string pero separados por un espacio.
    // Ejemplo: ("Soy", "Henry") ---> "Soy Henry"
    // Tu código:
+   if (apellido.length > 0) {
+      return nombre + " " + apellido;
+    } else {
+      return nombre;
+    }
     
    
    
@@ -38,7 +43,7 @@ function combinarNombres(nombre, apellido) {
 function obtenerSaludo(nombre) {
    // Toma el string "nombre" y concatena otra string en la cadena para que tome la siguiente forma:
    // Ejemplo: "Martin" ---> "Hola Martin!"
-   // Tu código:
+   // Tu código: 
    return "hola " + nombre + "!";
 }
 
@@ -73,15 +78,11 @@ function esVocal(letra) {
    // Si el usuario ingresa un string de más de un caracter debes retornar el mensaje: "Dato incorrecto".
    // Si no es vocal, tambien debe retornar "Dato incorrecto".
    // Tu código:const vocales = ["a", "e", "i", "o", "u"];
-
-  if (letra.length > 1) {
-   return "Dato incorrecto";
- } else if (vocales.includes(letra.toLowerCase())) {
-   return "Es vocal";
- } else {
-   return "Dato incorrecto";
- }
-
+   if (letra.length > 1) {
+      return "Dato incorrecto";
+    } else {
+      return vocales.includes(letra.toLowerCase()) ? "Es vocal" : "Dato incorrecto";
+    }
 
 }
 
